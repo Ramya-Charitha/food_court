@@ -1,0 +1,417 @@
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f3f6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: linear-gradient(90deg, #fc8019, #ff9f45);
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header input {
+  padding: 8px 12px;
+  width: 240px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* ---------- NAV BUTTONS ---------- */
+.nav-btn {
+  background: white;
+  color: #fc8019;
+  border: none;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  border-radius: 6px;
+}
+
+.cart-count {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+}
+
+/* ---------- GRID ---------- */
+.grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* ---------- FOOD CARD ---------- */
+.food-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+}
+
+/* Food image */
+.food-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Food info section */
+.food-info {
+  padding: 12px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.food-info h3 {
+  margin: 6px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.food-info h4 {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+}
+
+/* ---------- ADD TO CART ---------- */
+.add-cart-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.add-btn {
+  background: linear-gradient(45deg, #ff512f, #f09819);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.qty-badge {
+  background: #2ecc71;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ---------- CART / BOX ---------- */
+.box {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.box h2 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.box div {
+  margin-bottom: 10px;
+}
+
+.box button {
+  margin: 5px;
+}
+
+.box h3 {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #fc8019;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ---------- ORDERS ---------- */
+.order-card {
+  border: 1px solid #ddd;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.order-card ul {
+  padding-left: 18px;
+  margin: 8px 0;
+}
+
+/* ---------- ADDRESS FORM ---------- */
+.address-tab {
+  background: white;
+  width: 360px;
+  margin: 40px auto;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.address-tab h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.address-tab input,
+.address-tab textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.confirm-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: #172337;
+  color: white;
+  margin-top: 30px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  padding: 25px;
+  gap: 20px;
+}
+
+.footer-top h4 {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.footer-top p {
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+}
+/* FORCE FOOD NAME VISIBILITY */
+.food-name {
+  color: #222 !important;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.food-price {
+  color: #444 !important;
+  margin-bottom: 10px;
+}
+/* ---------- CART FIX ---------- */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-name {
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-actions button {
+  background: #777;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-qty {
+  font-weight: bold;
+  color: #333;
+}
+
+.place-btn {
+  margin-top: 15px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* ---------- ORDERS FIX ---------- */
+.order-card {
+  border: 1px solid #ddd;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.order-id,
+.order-date {
+  color: #222;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.order-items {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.order-items li {
+  color: #333;
+  font-size: 14px;
+}
+
+.delete-order-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* ============================= */
+/* FORCE TEXT VISIBILITY FIX */
+/* ============================= */
+
+/* General text */
+p, span, li, h1, h2, h3, h4, h5, h6 {
+  color: #222 !important;
+}
+
+/* Cart specific */
+.cart-name,
+.cart-qty,
+.cart-item,
+.cart-actions span {
+  color: #222 !important;
+}
+
+/* Orders specific */
+.order-id,
+.order-date,
+.order-items li {
+  color: #222 !important;
+}
+
+/* Box content */
+.box * {
+  color: #222 !important;
+}
+.edit-order-btn {
+  margin-left: 10px;
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* ---------- ORDER ACTION BUTTONS ---------- */
+.order-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.delete-order-btn,
+.edit-order-btn {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+/* Delete button */
+.delete-order-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.delete-order-btn:hover {
+  background: #c0392b;
+}
+
+/* Edit address button */
+.edit-order-btn {
+  background: #3498db;
+  color: white;
+}
+
+.edit-order-btn:hover {
+  background: #2c80b4;
+}
